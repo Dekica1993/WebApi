@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "iFad5kRjDLLyYO++PkxX5d/MPfCXqIunrr60/405WVw=",
+  "Source": "HomeworkWebApi",
+  "BasePath": "_content/HomeworkWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HomeworkWebApi/wwwroot",
+      "Source": "HomeworkWebApi",
+      "ContentRoot": "/Users/dejanmladenov/Desktop/C#/WebApi/HomeworkWebApi/HomeworkWebApi/wwwroot/",
+      "BasePath": "_content/HomeworkWebApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/dejanmladenov/Desktop/C#/WebApi/HomeworkWebApi/HomeworkWebApi/wwwroot/simple.html",
+      "SourceId": "HomeworkWebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dejanmladenov/Desktop/C#/WebApi/HomeworkWebApi/HomeworkWebApi/wwwroot/",
+      "BasePath": "_content/HomeworkWebApi",
+      "RelativePath": "simple.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/simple.html"
+    },
+    {
+      "Identity": "/Users/dejanmladenov/Desktop/C#/WebApi/HomeworkWebApi/HomeworkWebApi/wwwroot/simple.js",
+      "SourceId": "HomeworkWebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dejanmladenov/Desktop/C#/WebApi/HomeworkWebApi/HomeworkWebApi/wwwroot/",
+      "BasePath": "_content/HomeworkWebApi",
+      "RelativePath": "simple.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/simple.js"
+    }
+  ]
+}
