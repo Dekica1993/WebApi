@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieApp.DTO;
+using MovieApp.Models;
 using MovieApp.Models.Enums;
 
 namespace MovieApp.Controllers
@@ -100,7 +102,40 @@ namespace MovieApp.Controllers
 
             }
 
+
         }
+        [HttpPost]
+        public IActionResult CreateMovie([FromBody] AddNewMovieDto addNewMovie)
+        {
+            try
+            {
+                var movieDb = StaticDb.Movies.FirstOrDefault(movie => movie.Id == addNewMovie.Id);
+                if (movieDb == null)
+                {
+                    return NotFound($"Movie with {addNewMovie.Id} was not found");
+                }
+                var newMoviesDb = new Movie
+                {
+                    Id = addNewMovie.Id,
+                    Title = addNewMovie.Title,
+                    Year = addNewMovie.Year,
+                    Genre = addNewMovie.Genre,
+
+
+
+                };
+                StaticDb.Movies.Add(newMoviesDb);
+                return StatusCode(StatusCodes.Status201Created, "Movie is created!");
+
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occured!, please contact the admin");
+
+            }
+
+        }
+
 
 
 
