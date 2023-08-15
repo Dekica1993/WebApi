@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieApp.DTO;
+using MovieApp.Helpers;
 using MovieApp.Models;
 using MovieApp.Models.Enums;
 
@@ -109,6 +110,16 @@ namespace MovieApp.Controllers
         {
             try
             {
+                //if(addNewMovie.Description.Length >= 250)
+                // {
+                //     return BadRequest("");
+                // }
+                var isValidDescription = ValidationHelper.CheckLength(addNewMovie.Description);
+                if (!isValidDescription)
+                {
+                   return BadRequest("Not Found");
+                }
+
                 var movieDb = StaticDb.Movies.FirstOrDefault(movie => movie.Id == addNewMovie.Id);
                 if (movieDb == null)
                 {
@@ -135,6 +146,7 @@ namespace MovieApp.Controllers
             }
 
         }
+
 
 
 
