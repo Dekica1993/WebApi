@@ -95,6 +95,7 @@ namespace MovieApp.Controllers
             }
             catch (Exception)
             {
+                //test
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occured!, please contact the admin");
 
             }
