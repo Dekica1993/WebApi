@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Abstraction\" />
+    <None Remove="Implementation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstraction\" />
+    <Folder Include="Implementation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.Loto3000App.DTOs\SEDC.Loto3000App.DTOs.csproj" />
+    <ProjectReference Include="..\SEDC.Loto3000App.DataAcces\SEDC.Loto3000App.DataAcces.csproj" />
+    <ProjectReference Include="..\SEDC.Loto3000App.Mappers\SEDC.Loto3000App.Mappers.csproj" />
+    <ProjectReference Include="..\SEDC.Loto3000App.CryptoService\SEDC.Loto3000App.CryptoService.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
+  </ItemGroup>
+</Project>
